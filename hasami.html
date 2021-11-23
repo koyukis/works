@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+		/>
+		<title>齋藤小薫ーポートフォリオサイト</title>
+		<meta name="keywords" content="齋藤小薫、作品集、ポートフォリオ" />
+		<meta name="description" content="どんなサイトなのかの説明" />
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+
+	<body>
+		<header></header>
+		<main>
+            <section id="top">
+                <div class=" pages-top-bottom margins">
+                    <img class="img" src="images/top-20.jpg" alt="はさみのトプ画">
+                    <p class="txt-ex top-name-center">---Programming---</p>
+                    <p class="txt-top top-name-center">対戦型はさみ将棋</p>
+                    <p class="txt top-name-center">◴ 2020/6/4-2020/8/27&emsp;✎ Python Illustrator</p>
+                </div>
+            </section>
+
+            <section>
+                <h1 class="mixed mini-box menu topic">&nbsp;WORK</h1>
+                <div class=" pages-section-bottom margins">
+                    <p class="txt p-line">WebSocketを用いた対戦型はさみ将棋。</p>
+                    <h2 class="txt-h2">Rule</h2>
+                    <div class="pages-grid">
+                        <img class="pages-grid-item" src="images/hasami-06.jpg" alt="1">
+                        <p class="txt pages-grid-item">クライアントとサーバーを決め、2人のプレイヤーでゲームを開始する。</p>
+                    </div>
+                    <div class="pages-grid">
+                        <img class="pages-grid-item" src="images/hasami-07.jpg" alt="2">
+                        <p class="txt pages-grid-item">一方が駒を動かすともう一方の駒も反映して同じように動く。
+                            また、すでに駒が置いてあるマスには駒は置けず、駒を飛び越えて移動することもできない。
+                            1ターンごとに順番は交代する。</p>
+                    </div>
+                    <div class="pages-grid">
+                        <img class="pages-grid-item" src="images/hasami-08.jpg" alt="3">
+                        <p class="txt pages-grid-item">対戦中自分の持ち駒が相手の持ち駒より少ない場合、一度だけ自分のターンで相手の駒を一つ選び狙撃することができる。</p>
+                    </div>
+                    <div class="pages-grid">
+                        <img class="pages-grid-item" src="images/hasami-09.jpg" alt="4">
+                        <p class="txt pages-grid-item">相手の持ち駒を自分の持ち駒で挟んで消し4個以下にすると勝利。
+                            または、自分からギブアップすることもできる。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h1 class="mixed mini-box menu topic">&nbsp;MECHANISM</h1>
+                <div class="pages-section-bottom margins">
+                    <img class="img pages-grid-item" src="images/hasami-10.jpg" alt="流れ">
+                    <p class="txt higashiyama-work">関数sendを使って情報msgを送信→関数recvthで解読<br/>
+                    「end.」が送られると関数sendFinに進み、ボード画面はエンディングに切り替わる。
+                    それと同時にプレイヤー画面にカーソルが入るとエンディングに切り替わる設定になる。</p>
+                    <img class="img pages-grid-item" src="images/hasami-11.jpg" alt="終了解説">
+                </div>
+            </section>
+		</main>
+		<footer></footer>
+	</body>
+</html>
