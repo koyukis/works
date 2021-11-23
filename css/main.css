@@ -1,0 +1,776 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.logo-img{
+	position:absolute;
+	width:10%;
+	z-index:2;
+}
+
+.p-top{
+	position:absolute;
+	z-index:3;
+	margin:20% 20% 30% 20%;
+	color:white;
+	font-size: 10vw;
+	font-family: "futura";
+}
+.mixed {/* 文字縦書き横向き */
+	writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+}
+.menu{
+	float: left;
+	width: 50px;
+	margin-right:10px;
+	font-family: "futura";
+}
+.mini-box{
+	border-top:13px solid rgb(0,0,0);
+}
+
+.p-sanserif{
+	font-family: sans-serif;
+	font-size:20px;
+}
+.gray{
+	color:rgb(130,130,130);
+}
+.top-name-bottom{
+	margin-bottom:2%;
+}
+
+.p-serif{
+	font-family: serif;
+}
+.fade{
+	animation: fadeIn 5s ease 0.3s 1 normal;
+}
+@keyframes fadeIn { /*animation-nameで設定した値を書く*/
+	0% {opacity: 0} /*アニメーション開始時は不透明度0%*/
+	100% {opacity: 1} /*アニメーション終了時は不透明度100%*/
+}
+ 
+
+
+.box17{
+    /* margin:2em 10em; */
+    position: relative;
+    padding: 5em 5em;
+    border-top: solid 5px black;
+    border-bottom: solid 5px black;
+	
+}
+.box17:before, .box17:after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 5px;
+    height: -webkit-calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: black;
+}
+.box17:before {left: 10px;}
+.box17:after {right: 10px;}
+.box17 p {
+    margin: 0; 
+    padding: 0;
+}
+.face-img{
+	width:40%;
+	margin-left:30%;
+	margin-right:30%;
+}
+
+
+
+.graf {
+	display: flex;
+	align-items: center;
+	margin: 7%;
+}
+
+.data-name {
+	padding: 0 6px;
+	color: #404040;
+	font-family: "ヒラギノ明朝 Pro";
+	font-size:18px;
+	text-justify:inter-word;
+	
+
+}
+
+.graf-bar-bg {
+	width: 100%;
+	margin-left:10%;
+	text-justify:left;
+	background: #e0e0e0;
+}
+
+.graf-bar {
+	background: rgba(0,0,0,0.7);
+}
+
+.graf-bar span{
+	color: #FFF;
+	padding:10px;
+}
+
+.imgs{/* 作品サムネサイズ */
+	width:93%;
+	margin-bottom:3%;
+}
+
+	.grid{/* トップページ作品陳列１：１：１ */
+		display: grid;
+		margin-left: 5%;
+		margin-right: 5%;
+		gap:10%;
+		grid-template-columns:1fr 1fr 1fr;
+	}
+
+	.gird-item{/* 作品陳列 */
+		width:100%;
+		text-align:center;
+		margin:40px;
+	}
+
+
+	.black-box{
+			width:20vw;
+			height:32vw;
+			padding-top:1vw;
+			text-align:center;
+			background-color: rgb(0,0,0);
+			/* box-shadow: 15px 15px 30px 10px rgba(0,0,0,0.4);水平　垂直　ぼかし具合　広がり具合 */
+			
+		}
+
+	.card-top-txt{
+		color:rgb(230,230,230);
+		text-align:right;
+		margin-top:2%;
+		margin-right:5%;
+		margin-bottom:8%;
+		font-size: 1.3vw;
+		font-family: "futura";
+	}
+	.card-txt{
+		color:rgb(255,255,255);
+		text-align:right;
+		margin:4% 5% 5% 0;
+		font-size: 1.5vw;
+		font-family: "ヒラギノ明朝 Pro";
+		line-height: 1.5;/* 行間 */
+		
+	}
+
+	.card-mini-txt{
+		color:rgb(255,255,255);
+		text-align:right;
+		margin-left:5%;
+		margin-right:5%;
+		font-size: 1.1vw;
+		font-family: "ヒラギノ明朝 Pro";
+	}
+	/* .triangle{
+		border-top: 62px solid transparent;
+		border-right: 62px solid #f6da69;
+		margin-bottom:0;
+	} */
+	
+	.btn-img:hover{
+		transform:scale(1.05,1.05);
+		/* filter:brightness(97%); */
+		transform:translate(0px,-10px);
+		transition:0.2s;
+		box-shadow: 0px 15px 30px 10px rgba(0,0,0,0.4);/* 水平　垂直　ぼかし具合　広がり具合 */
+	}
+	.under-line{
+		text-decoration: none;
+	}
+
+
+
+	.hyper{
+		margin-bottom:100vw;
+	}
+
+	.box3{
+		padding: 0.5em 1em;
+		margin: 2em 0;
+		color: #474747;
+		background: white;/*背景色*/
+		border-left: double 10px black;/*左線*/
+		border-right: double 10px black;/*右線*/
+	}
+	.box3 p {
+		margin: 0; 
+		padding: 0;
+	}
+
+
+
+	/*==================================================
+トップページスライダーのためのcss
+===================================*/
+.mylife {/*横幅94%で左右に余白を持たせて中央寄せ*/
+    width:100%;
+    margin:0 auto;
+}
+
+.mylife img {
+    width:auto;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+    height:30vw;
+}
+
+.mylife .slick-slide {
+	transform: scale(0.8);/*左右の画像のサイズを80%に*/
+	transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+	opacity: 0.5;/*透過50%*/
+}
+
+.mylife .slick-slide.slick-center{
+	transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+	opacity: 1;/*透過なし*/
+}
+
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+    position: absolute;/*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666;/*矢印の色*/
+    border-right: 2px solid #666;/*矢印の色*/
+    height: 15px;
+    width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right: -1.5%;
+    transform: rotate(45deg);
+}
+
+
+
+
+.box19 {
+    position: relative;
+    padding:0.25em 1em;
+}
+.box19:before,.box19:after{ 
+    content:'';
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    display: inline-block;
+}
+.box19:before{
+    border-left: solid 1px #5767bf;
+    border-top: solid 1px #5767bf;
+    top:0;
+    left: 0;
+}
+.box19:after{
+    border-right: solid 1px #5767bf;
+    border-bottom: solid 1px #5767bf;
+    bottom:0;
+    right: 0;
+}
+.box19 p {
+    margin: 0; 
+    padding: 0;
+}
+
+
+
+
+
+
+
+@media (max-width:766px){/* 作品陳列　パソコン用を消す　スマホ */
+	.menu{
+		width:30px;
+		margin-right:5px;
+	}
+	.mixed{
+		font-size: 24px;
+	}
+	.grid{
+		display: grid;
+		grid-template-columns:1fr 1fr;
+		margin-left: 5%;
+		margin-right: 5%;
+		gap:8%;
+	}
+	.gird-item{/* 作品陳列 */
+		width:100%;
+	}
+	.black-box{
+		width:150px;
+		height:250px;
+		padding-top:10px;
+		background-color: rgb(0,0,0);
+		box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.3);/* 水平　垂直　ぼかし具合　広がり具合 */
+	}
+	.card-txt{
+		font-size: 2.0vw;
+		
+	}
+	/* .triangle{
+		border-top: 39px solid transparent;
+		border-right: 39px solid #f6da69;
+		text-align:bottom;
+	} */
+	.box17{
+		padding: 2em 2em;
+		border-top: solid 2px black;
+    	border-bottom: solid 2px black;
+	}
+	.box17:before, .box17:after{
+		width: 2px;
+	}
+	.box3{
+		padding: 0.5em 1em;
+		margin: 2em 0;
+		border-left: double 7px black;/*左線*/
+		border-right: double 7px black;/*右線*/
+	}
+	.hyper{
+		margin-bottom:180vw;
+	}
+	.data-name {
+		font-size:12px;
+	
+	}
+
+}
+
+
+
+
+
+
+
+
+.section-bottom{
+	margin-bottom:200px;
+}
+
+.section-top{
+	margin-top:200px;
+}
+
+.pages-top-bottom{
+	padding-top:1%;
+	padding-bottom:8%;
+}
+.pages-section-bottom{
+	padding-top:18%;
+	padding-bottom:18%;
+	margin-right:1%;
+	margin-left:1%;
+	border-top:2px solid rgb(0,0,0);
+}
+.pages-h1-top{
+	margin-top:15%;
+}
+.pages-h1-bottom{
+	margin-bottom:10%;
+}
+.pages-center{
+	text-align:center;
+}
+.pages-right{
+	text-align:right;
+	/* margin-left:70%; */
+}
+.txt-h2{
+	font-family: "ヒラギノ明朝 Pro";
+}
+.txt{
+	font-family: "ヒラギノ明朝 Pro";
+	font-size:20px;
+	line-height: 1.8;
+}
+.txt-ex{/* 説明部分 */
+	font-family: "ヒラギノ明朝 Pro";
+	font-size:25px;
+	line-height: 1.8;
+}
+.txt-top{
+	font-family: "ヒラギノ明朝 Pro";
+	font-size:40px;
+	line-height: 1.8;
+}
+
+.border-radius{
+	width: 15vw;
+	height: 15vw;
+	line-height: 200px;
+	background-color: rgb(150,180,150);
+	border-radius: 50%;
+	color: #fff;
+	font-size:2vw;
+	line-height: 1.2;
+	display: flex;
+	text-align: center;
+	flex-direction: column; 
+	/* 子要素をflexboxにより縦方向に揃える */
+	justify-content: center; 
+
+  }
+  .triangle01{ 
+    width: 0;
+    height: 0;
+    border-top: solid 15px transparent;
+    border-right: solid 15px transparent;
+    border-bottom: solid 15px transparent;
+    border-left: solid 15px #697b91;
+	margin-left:40%;
+}
+.radius-grid{
+	display: grid;
+	grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	gap:3%;
+	margin-bottom:10%;
+}
+.radius-grid-item{
+	/* width:100%; */
+}
+
+.radius-center{
+	display: flex;
+	/* flex-direction: column; 子要素をflexboxにより縦方向に揃える */
+    justify-content: center; /* 子要素をflexboxにより中央に配置する */
+    /* align-items: center;  子要素をflexboxにより中央に配置する */
+
+}
+.main {
+	align-items: center;
+  }
+
+.right{
+	margin-right:10%;
+}
+.left{
+	margin-left:10%;
+}
+
+
+/* .top-menu{
+	float: left;
+	width: 20%;
+	text-align:center;
+} */
+.black-top{
+	/* width:100%; */
+	height:auto;
+	background-color: rgb(0,0,0);
+}
+.img-80{
+	width:80%;
+	margin-bottom:60px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.img-60{
+	width:60%;
+	margin-bottom:60px;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+.top-name-center{
+	text-align: center;
+}
+.margins{
+	margin-right:10%;
+	margin-left:10%;
+}
+.img{
+	width:100%;
+}
+.topic{/* 左側のプロセスとかの上に余白 */
+	margin-top:15%;
+}
+
+.s-line{
+	margin-bottom:20px;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+.p-line{
+	margin-bottom:60px;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+/* ボード */
+.board-JPG{
+	width:60%;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+.board-work{
+	margin-bottom:50%;
+}
+
+
+
+/* バッグ */
+.bag-jpg{
+	float: left;
+	width: 60%;
+	margin-right:10px;
+}
+.bag-work{
+	margin-bottom:40%;
+}
+
+
+/* 東山 */
+.higashiyama-jpg{
+	float: right;
+	width: 30%;
+}
+.higashiyama-marker{
+	background : linear-gradient(transparent 20%, rgb(150,180,150) 45%);
+}
+.higashiyama-box{
+	border:2px dashed #ffa64d;
+}
+.higashiyama-work{
+	margin-bottom:20%;
+}
+.higashiyama-work-grid{
+	display: grid;
+	grid-template-columns:1fr 1fr 1fr 1fr;
+	gap:3%;
+	margin-bottom:10%;
+}
+.higashiyama-work-grid-item{
+}
+
+
+/* ネコ */
+.neko-jpg{
+	width:80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+
+/* モーキャプ */
+.motion-work{
+	margin-bottom:5%;
+}
+
+
+/* パンフレット */
+.pamph-work-top{
+	margin-top:20%;
+}
+.geikoten-box{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+	padding-right:5%;
+	padding-top:3%;
+    /* background: #f0f7ff; */
+    border: dashed 2px rgb(0,0,0);/*点線*/
+}
+.geikoten-box p {
+    margin: 0; 
+    padding: 0;
+}
+.geikoten-grid{
+	display: grid;
+	grid-template-columns:1fr 1fr;
+	gap:3%;
+	margin-bottom:10%;
+}
+.geikoten-grid-item{
+	width:100%;
+}
+
+
+#flipbook {
+	width: 100%; /* flipbook自体の横幅なので各ページは200px */
+	height: 28vw;
+	/* margin: 10% 20%;  */
+	/* 一番左端だとたまに見切れるので適当に移動 */
+  }
+
+
+.sample ul{
+	display: flex;
+	overflow-x: scroll;
+	margin: 0;
+	padding: 0;
+}
+.sample li{
+	min-width: 40%;
+	margin: 10px;
+	padding: 0;
+	list-style: none;
+}
+
+
+.persona-box{
+		padding: 1.5em 0.5em;
+		margin: 2em 10%;
+		padding-right:5%;
+		color: #232323;
+		background: rgb(240,245,240);
+		/* border-left: solid 25% rgb(100,100,100); */
+	}
+	.persona-box img{
+		width:60%;
+		margin:0 20%;
+	}
+	.persona-grid{
+		display: grid;
+		grid-template-columns:0.5fr 1fr;
+		gap:3%;
+		margin-bottom:10%;
+	}
+	.persona-grid-item{
+	}
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+	width:50%;
+	margin:0 auto;
+}
+
+.slider img {
+	width:100%;/*スライダー内の画像を横幅100%に*/
+	height:auto;
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.slider .slick-slide {
+	margin:0 10px;
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev,
+.slick-next {
+	position: absolute;/*絶対配置にする*/
+	top: 42%;
+	cursor: pointer;/*マウスカーソルを指マークに*/
+	outline: none;/*クリックをしたら出てくる枠線を消す*/
+	border-top: 2px solid rgb(0, 0, 0);/*矢印の色*/
+	border-right: 2px solid rgb(0, 0, 0);/*矢印の色*/
+	height: 15px;
+	width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+	left: -5.5%;
+	transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+	right: -5.5%;
+	transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+	text-align:center;
+	margin:20px 0 0 0;
+}
+
+.slick-dots li {
+	display:inline-block;
+	margin:0 5px;
+}
+
+.slick-dots button {
+	color: transparent;
+	outline: none;
+	width:10px;/*ドットボタンのサイズ*/
+	height:10px;/*ドットボタンのサイズ*/
+	display:block;
+	border-radius:50%;
+	background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+	background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+
+
+
+
+.pages-grid{
+	display: grid;
+	grid-template-columns:1fr 1fr;
+	gap:3%;
+	margin-bottom:10%;
+}
+.pages-grid-item{
+	width:100%;
+}
+.pages-grid-none{
+	display: grid;
+	grid-template-columns:1fr 1fr;
+	gap:1%;
+}
+@media (max-width:766px){/* 作品陳列　パソコン用を消す　スマホ */
+	.txt-top{
+		font-size:18px;
+	}
+	.txt-ex{
+		font-size:15px;
+	}
+	.txt{
+		font-size:13px;
+	}
+	.p-line{
+		margin-bottom:30px;
+	}
+	.geikoten-box{
+		padding: 0.5em 1em;
+		margin: 2em 0;
+		padding-right:3%;
+		padding-top:0;
+		/* background: #f0f7ff; */
+	}
+	.geikoten-box p{
+		text-align:center;
+	}
+	.geikoten-grid{
+		grid-template-columns:1fr;
+		margin-bottom:8%;
+	}
+	.persona-box{
+		padding: 1.5em 0.5em;
+		padding-right:1%;
+	}
+	.persona-grid{
+		display: grid;
+		grid-template-columns:1fr;
+	}
+
+}
