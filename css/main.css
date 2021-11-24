@@ -37,7 +37,7 @@
 	font-size:20px;
 }
 .gray{
-	color:rgb(130,130,130);
+	color:rgb(180,180,180);
 }
 .top-name-bottom{
 	margin-bottom:2%;
@@ -48,6 +48,23 @@
 }
 .fade{
 	animation: fadeIn 5s ease 0.3s 1 normal;
+}
+
+.top-box{
+	position:absolute;
+	z-index:2;
+	width:50vw;
+	height:12vw;
+	padding-top:1vw;
+	text-align:center;
+	background-color: rgb(25,25,25);
+}
+.p-top-top{
+	color:rgb(255,255,255);
+}
+.margins-top{
+	margin-right:4%;
+	margin-left:4%;
 }
 @keyframes fadeIn { /*animation-nameで設定した値を書く*/
 	0% {opacity: 0} /*アニメーション開始時は不透明度0%*/
@@ -413,6 +430,7 @@
 }
 .txt-top{
 	font-family: "ヒラギノ明朝 Pro";
+
 	font-size:40px;
 	line-height: 1.8;
 }
