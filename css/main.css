@@ -6,8 +6,10 @@
 
 .logo-img{
 	position:absolute;
-	width:10%;
-	z-index:2;
+	width:5%;
+	margin-left:1%;
+	margin-top:1%;
+	z-index:3;
 }
 
 .p-top{
@@ -38,6 +40,7 @@
 }
 .gray{
 	color:rgb(180,180,180);
+	font-size:1.2vw
 }
 .top-name-bottom{
 	margin-bottom:2%;
@@ -51,13 +54,15 @@
 }
 
 .top-box{
+	
 	position:absolute;
 	z-index:2;
 	width:50vw;
-	height:12vw;
+	height:18vw;
 	padding-top:1vw;
 	text-align:center;
 	background-color: rgb(25,25,25);
+	
 }
 .p-top-top{
 	color:rgb(255,255,255);
@@ -313,12 +318,23 @@
 }
 
 
-
+@media (min-width:766px){
+	.mini-top-k{
+		display:none;
+	}
+}
 
 
 
 
 @media (max-width:766px){/* 作品陳列　パソコン用を消す　スマホ */
+	.top-box{
+		display:none;
+	}
+	.mini-top-k{
+
+	}
+
 	.menu{
 		width:30px;
 		margin-right:5px;
@@ -420,29 +436,30 @@
 }
 .txt{
 	font-family: "ヒラギノ明朝 Pro";
-	font-size:20px;
+	font-size:1.5vw;
 	line-height: 1.8;
 }
 .txt-ex{/* 説明部分 */
 	font-family: "ヒラギノ明朝 Pro";
-	font-size:25px;
+	font-size:1.5vw;
 	line-height: 1.8;
 }
 .txt-top{
 	font-family: "ヒラギノ明朝 Pro";
 
-	font-size:40px;
+	font-size:2.5vw;
 	line-height: 1.8;
 }
 
 .border-radius{
-	width: 15vw;
-	height: 15vw;
-	line-height: 200px;
+	width: 10vw;
+	height: 10vw;
+	/* line-height: 150px; */
 	background-color: rgb(150,180,150);
 	border-radius: 50%;
 	color: #fff;
-	font-size:2vw;
+	font-size:1.5vw;
+	color:rgb(0,0,0);
 	line-height: 1.2;
 	display: flex;
 	text-align: center;
@@ -461,9 +478,10 @@
 	margin-left:40%;
 }
 .radius-grid{
+	width:60%;
 	display: grid;
 	grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-	gap:3%;
+	gap:2%;
 	margin-bottom:10%;
 }
 .radius-grid-item{
