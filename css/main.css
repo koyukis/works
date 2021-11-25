@@ -460,7 +460,7 @@
 	width: 10vw;
 	height: 10vw;
 	/* line-height: 150px; */
-	background-color: rgb(150,180,150);
+	background-color: #d9e367;
 	border-radius: 50%;
 	color: #fff;
 	font-size:1.5vw;
@@ -472,6 +472,12 @@
 	/* 子要素をflexboxにより縦方向に揃える */
 	justify-content: center; 
 
+  }
+  .radius-higashiyama{
+	  background-color:#74b32f;
+  }
+  .radius-carousel{
+	background-color:#d3eef8;
   }
   .triangle01{ 
     width: 0;
@@ -680,7 +686,7 @@
 		margin: 2em 10%;
 		padding-right:5%;
 		color: #232323;
-		background: rgb(240,245,240);
+		background: #d3eef8;
 		/* border-left: solid 25% rgb(100,100,100); */
 	}
 	.persona-box img{
