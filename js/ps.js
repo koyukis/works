@@ -1,6 +1,7 @@
+    console.log("hello");
     let data = [
-    {  title:800 },
-    // {  title:400 },
+    // {  title:800 },
+    {  title:400 }
     // {  title:600 },
     // {  title:400 },
     // {  title:450 },
@@ -27,7 +28,7 @@
     variable.view_value = 0;
     
   // containerに追加
-    document.querySelector('#container').insertAdjacentHTML('beforeend',
+    document.querySelector('#ps').insertAdjacentHTML('beforeend',
         //   <div><span class="data-name"> ${variable.src}</div></span>
         `<div class="graf">   
             <div class="graf-bar-bg">

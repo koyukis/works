@@ -81,7 +81,7 @@
 
 
 .box17{
-    /* margin:2em 10em; */
+    margin:0 5% 10% 5%;
     position: relative;
     padding: 5em 5em;
     border-top: solid 5px black;
@@ -110,26 +110,37 @@
 }
 
 
-
-.graf {
+.con{
 	display: flex;
-	align-items: center;
-	margin: 7%;
+	align-items:right;
+	/* display: inline-block;
+	vertical-align: middle; */
+	display: grid;
+	grid-template-columns:1fr 9fr;
+	width:100%;
+	margin-bottom:2%;
 }
 
-.data-name {
-	padding: 0 6px;
-	color: #404040;
-	font-family: "ヒラギノ明朝 Pro";
-	font-size:18px;
-	text-justify:inter-word;
-	
-
+.graf-img{
+	display: flex;	
+	align-items: left;
 }
+.graf {
+	display: flex;	
+	align-items: right;
+	margin:3% 0 3% 0;
+}
+
+.data-img{
+	width:15%;
+}
+
 
 .graf-bar-bg {
+	display: flex;
+	align-items:right;
 	width: 100%;
-	margin-left:10%;
+	margin-left:3%;
 	text-justify:left;
 	background: #e0e0e0;
 }
@@ -244,6 +255,7 @@
 .mylife {/*横幅94%で左右に余白を持たせて中央寄せ*/
     width:100%;
     margin:0 auto;
+	margin-bottom:60%;
 }
 
 .mylife img {
@@ -403,7 +415,6 @@
 
 
 
-
 .section-bottom{
 	margin-bottom:200px;
 }
@@ -435,6 +446,9 @@
 .pages-right{
 	text-align:right;
 	/* margin-left:70%; */
+}
+.about-txt-bottom{
+	margin-bottom:20px;
 }
 .txt-h2{
 	font-family: "ヒラギノ明朝 Pro";
@@ -638,7 +652,7 @@
 }
 .geikoten-box{
     padding: 0.5em 1em;
-    margin: 2em 0;
+    margin: 0 0 2em 0;
 	padding-right:5%;
 	padding-top:3%;
     /* background: #f0f7ff; */
@@ -697,7 +711,7 @@
 		display: grid;
 		grid-template-columns:1fr 1fr;
 		gap:3%;
-		margin-bottom:10%;
+		margin-bottom:5%;
 	}
 	.persona-grid-item{
 	}
