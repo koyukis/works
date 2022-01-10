@@ -9,7 +9,20 @@
 	width:5%;
 	margin-left:1%;
 	margin-top:1%;
-	z-index:3;
+	z-index:30;
+}
+.gif{
+	position:absolute;
+	z-index: 30;
+	width:60%;
+	margin:10% 20% 0 20%;
+}
+.top-img{
+	width:100%;
+}
+.top-img:hover{
+	transform: scale(1.2);
+	transition-duration: 0.5s;
 }
 
 .p-top{
@@ -51,12 +64,10 @@
 .p-serif{
 	font-family: serif;
 }
-.fade{
-	animation: fadeIn 5s ease 0.3s 1 normal;
-}
+
 
 .top-box{
-	
+
 	position:absolute;
 	z-index:2;
 	width:50vw;
@@ -64,7 +75,7 @@
 	padding-top:1vw;
 	text-align:center;
 	background-color: rgba(25,25,25,0.9);
-	
+
 }
 .p-top-top{
 	color:rgb(255,255,255);
@@ -73,11 +84,69 @@
 	margin-right:4%;
 	margin-left:4%;
 }
-@keyframes fadeIn { /*animation-nameで設定した値を書く*/
-	0% {opacity: 0} /*アニメーション開始時は不透明度0%*/
-	100% {opacity: 1} /*アニメーション終了時は不透明度100%*/
+
+.main_imgBox{
+	/* height: 100%; */
+	overflow: hidden;
+	position: relative;
 }
- 
+.main_img{
+    z-index:10;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-animation: anime 6s 0s infinite;
+    animation: anime 6s 0s infinite;
+}
+/* .main_img:nth-of-type(2) {
+	-webkit-animation-delay: 6s;
+	animation-delay: 6s; } */
+
+/* .main_img:nth-of-type(3) {
+	-webkit-animation-delay: 12s;
+	animation-delay: 12s; }
+/*  */
+/* .main_img:nth-of-type(4) {
+	-webkit-animation-delay: 18s;
+	animation-delay: 18s; }
+
+.main_img:nth-of-type(5) {
+	-webkit-animation-delay: 24s;
+	animation-delay: 24s; }
+
+.main_img:nth-of-type(6) {
+	-webkit-animation-delay: 30s;
+	animation-delay: 30s; } */
+
+@keyframes anime {
+	0% {
+		opacity: 0;
+	}
+	8% {
+		opacity: 1;
+	}
+	17% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 0;
+		transform: scale(1.2) ;
+		z-index:9;
+	}
+	100% { opacity: 0 }
+}
+
+/* @keyframes fadeIn { anim/ation-nameで設定した値を書く
+	0% {opacity: 0} アニメーション開始時は不透明度0%
+	100% {opacity: 1} アニメーション終了時は不透明度100%
+} */
+
 
 
 .box17{
@@ -86,7 +155,6 @@
     padding: 5em 5em;
     border-top: solid 5px black;
     border-bottom: solid 5px black;
-	
 }
 .box17:before, .box17:after{
     content: '';
@@ -100,33 +168,105 @@
 .box17:before {left: 10px;}
 .box17:after {right: 10px;}
 .box17 p {
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
 .face-img{
-	width:50%;
-	margin-left:25%;
-	margin-right:25%;
+	width:40%;
+	margin-left:30%;
+	margin-right:30%;
 }
 
 
-.con{
+
+
+
+/************************************
+** 比較棒グラフ
+************************************/
+.ub-bar-graph{
+	margin:0 auto 2rem !important;
+	padding:2em !important;
+	background:#fafafa;
+	box-shadow: 0 3px 5px rgba(0,0,0,.07);
+	color: #333;
+}
+.ub-bar-graph dl > div{/* １この棒 */
+	margin: 0 auto 1.5em !important;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items:right;
+	height: 30px;
+	font-size: 0.9rem;
+	position:relative;
+	box-shadow: 0 3px 5px rgba(0,0,0,.03);
+}
+.ub-bar-graph dl > div:last-child{/* ？ */
+	margin: 0 !important;
+}
+.ub-bar-graph dl > div dt{/* 棒の黒い部分 */
+	background:#333;
+	border-right: 2px solid #fff;
+}
+.ub-bar-graph dl > div dd{/* 棒のグレーの部分 */
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex:1;
+	margin:0 !important;
+	font-size:1em;
+	background:#dfe6e8;
+}
+.ub-bar-graph dl > div dt > span,.ub-bar-graph dl > div dd > span{/* 棒の見出し　文字 */
+	position:absolute;/* 必要 */
+	/* z-index: 1; */
+	color:#333;
+	font-size: 1em;
+	line-height: 1.5;
+}
+.ub-bar-graph dl > div dt > .ub-bar-graph__content{/* 棒の見出し　文字 */
+	left:0px;
+	top:-20px;
+}
+/* .ub-bar-graph dl > div dd >  .ub-bar-graph__value{
+	width: 10%;
+} */
+@media screen and (max-width: 560px) {
+	.ub-bar-graph{
+	padding:2em 1em !important;
+	}
+	.ub-bar-graph dl > div{
+	margin: 0 auto 2em !important;
+	}
+}
+.skill-grid{
+	display: grid;
+	grid-template-columns:1fr 1fr;
+}
+.skill-grid-item{
+}
+
+
+
+
+
+
+/* .con{スキル */
+	/* display: flex;
+	align-items:right; */
 	/* display: inline-block;
 	vertical-align: middle; */
-	display: grid;
+	/* display: grid;
 	grid-template-columns:1fr 9fr;
 	width:100%;
 	margin-bottom:2%;
 }
 
 .graf-img{
-	display: flex;	
+	display: flex;
 	align-items: left;
 }
 .graf {
-	display: flex;	
+	display: flex;
 	align-items: right;
 	margin:3% 0 3% 0;
 }
@@ -152,13 +292,20 @@
 .graf-bar span{
 	color: #FFF;
 	padding:10px;
-}
+} */
 
 .imgs{/* 作品サムネサイズ */
 	width:93%;
 	margin-bottom:3%;
 }
 
+.about-grid{/* aboutのprofileとskill */
+	display: grid;
+	gap:3%;
+	grid-template-columns:1fr 1fr;
+}
+.about-grid-item{
+}
 	.grid{/* トップページ作品陳列１：１：１ */
 		display: grid;
 		margin-left: 5%;
@@ -181,7 +328,6 @@
 			text-align:center;
 			background-color: rgb(0,0,0);
 			/* box-shadow: 15px 15px 30px 10px rgba(0,0,0,0.4);水平　垂直　ぼかし具合　広がり具合 */
-			
 		}
 
 	.card-top-txt{
@@ -200,7 +346,6 @@
 		font-size: 1.5vw;
 		font-family: "ヒラギノ明朝 Pro";
 		line-height: 1.5;/* 行間 */
-		
 	}
 
 	.card-mini-txt{
@@ -216,13 +361,15 @@
 		border-right: 62px solid #f6da69;
 		margin-bottom:0;
 	} */
-	
-	.btn-img:hover{
-		transform:scale(1.05,1.05);
-		/* filter:brightness(97%); */
-		transform:translate(0px,-10px);
+
+	.btn-img{
 		transition:0.2s;
-		box-shadow: 0px 15px 30px 10px rgba(0,0,0,0.4);/* 水平　垂直　ぼかし具合　広がり具合 */
+	}
+	.btn-img:hover{
+		/* filter:brightness(97%); */
+		transform:scale(1.08)translate(0px,-10px);
+		transition:0.2s;
+		box-shadow: 0px 15px 30px 10px rgba(0,0,0,0.5);/* 水平　垂直　ぼかし具合　広がり具合 */
 	}
 	.under-line{
 		text-decoration: none;
@@ -236,14 +383,14 @@
 
 	.box3{
 		padding: 0.5em 1em;
-		margin: 2em 0;
+		margin:0 20% 0 20%;
 		color: #474747;
 		background: white;/*背景色*/
 		border-left: double 10px black;/*左線*/
 		border-right: double 10px black;/*右線*/
 	}
 	.box3 p {
-		margin: 0; 
+		margin: 0;
 		padding: 0;
 	}
 
@@ -253,9 +400,8 @@
 トップページスライダーのためのcss
 ===================================*/
 .mylife {/*横幅94%で左右に余白を持たせて中央寄せ*/
-    width:100%;
-    margin:0 auto;
-	margin-bottom:60%;
+    width:80%;
+    margin:0 10% 20% 10%;
 }
 
 .mylife img {
@@ -278,7 +424,7 @@
 /*矢印の設定*/
 
 /*戻る、次へ矢印の位置*/
-.slick-prev, 
+.slick-prev,
 .slick-next {
     position: absolute;/*絶対配置にする*/
     top: 42%;
@@ -307,7 +453,7 @@
     position: relative;
     padding:0.25em 1em;
 }
-.box19:before,.box19:after{ 
+.box19:before,.box19:after{
     content:'';
     width: 20px;
     height: 30px;
@@ -327,10 +473,21 @@
     right: 0;
 }
 .box19 p {
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
-
+.last-box{
+	width:100%;
+	background-color: #2c2a26;
+	padding:5% 0;
+}
+.last-box-img{
+	width: 20%;
+	margin: 3% 40% 0 40%;
+}
+.last-word{
+	color: white;
+}
 
 @media (min-width:766px){
 	.mini-top-k{
@@ -359,6 +516,9 @@
 	.mixed{
 		font-size: 24px;
 	}
+	.about-grid{
+		grid-template-columns:1fr;
+	}
 	.grid{
 		display: grid;
 		grid-template-columns:1fr 1fr;
@@ -374,11 +534,11 @@
 		height:250px;
 		padding-top:10px;
 		background-color: rgb(0,0,0);
-		box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.3);/* 水平　垂直　ぼかし具合　広がり具合 */
+		box-shadow: 5px 5px 10px 5px rgba(0,0,0,0);/* 水平　垂直　ぼかし具合　広がり具合 */
 	}
 	.card-txt{
 		font-size: 2.0vw;
-		
+
 	}
 	/* .triangle{
 		border-top: 39px solid transparent;
@@ -388,23 +548,22 @@
 	.box17{
 		padding: 2em 2em;
 		border-top: solid 2px black;
-    	border-bottom: solid 2px black;
+		border-bottom: solid 2px black;
 	}
 	.box17:before, .box17:after{
 		width: 2px;
 	}
 	.box3{
-		padding: 0.5em 1em;
-		margin: 2em 0;
 		border-left: double 7px black;/*左線*/
 		border-right: double 7px black;/*右線*/
+
 	}
+
 	.hyper{
 		margin-bottom:180vw;
 	}
 	.data-name {
 		font-size:12px;
-	
 	}
 
 }
@@ -415,6 +574,12 @@
 
 
 
+.about-tag-top{/* about左のタグの上の調整 */
+	margin-top: 10%;
+}
+.about-dialy-top{/* aboutのdialyのtopにだけ使ってる */
+	margin-top: 5%;
+}
 .section-bottom{
 	margin-bottom:200px;
 }
@@ -482,18 +647,18 @@
 	line-height: 1.2;
 	display: flex;
 	text-align: center;
-	flex-direction: column; 
+	flex-direction: column;
 	/* 子要素をflexboxにより縦方向に揃える */
-	justify-content: center; 
+	justify-content: center;
 
-  }
-  .radius-higashiyama{
-	  background-color:#74b32f;
-  }
-  .radius-carousel{
+}
+.radius-higashiyama{
+	background-color:#74b32f;
+}
+.radius-carousel{
 	background-color:#d3eef8;
-  }
-  .triangle01{ 
+}
+.triangle01{
     width: 0;
     height: 0;
     border-top: solid 15px transparent;
@@ -522,7 +687,7 @@
 }
 .main {
 	align-items: center;
-  }
+}
 
 .right{
 	margin-right:10%;
@@ -530,6 +695,55 @@
 .left{
 	margin-left:10%;
 }
+
+/* アニメーションスタートの遅延時間を決めるCSS*/
+
+.delay-time02{
+animation-delay: 0.2s;
+}
+
+.delay-time04{
+animation-delay: 0.4s;
+}
+
+
+
+
+
+
+/*==================================================
+スタート時は要素自体を透過0にするためのopacity:0;を指定する
+===================================*/
+
+.box{
+	opacity: 0;
+}
+
+/*==================================================
+動き自体の指定：今回は「ふわっ」
+===================================*/
+
+.fadeUp {
+animation-name:fadeUpAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
+@keyframes fadeUpAnime{
+from {
+    opacity: 0;
+	transform: translateY(100px);
+}
+
+to {
+    opacity: 1;
+	transform: translateY(0);
+}
+}
+
+
+
+
 
 
 /* .top-menu{
@@ -659,7 +873,7 @@
     border: dashed 2px rgb(0,0,0);/*点線*/
 }
 .geikoten-box p {
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
 .geikoten-grid{
@@ -678,7 +892,7 @@
 	height: 28vw;
 	/* margin: 10% 20%;  */
 	/* 一番左端だとたまに見切れるので適当に移動 */
-  }
+}
 
 
 .sample ul{

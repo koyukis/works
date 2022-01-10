@@ -1,18 +1,19 @@
     let data = [
     {  title:800 },
-    // {  title:400 },
-    // {  title:600 },
-    // {  title:400 },
-    // {  title:450 },
-    // {  title:400 }
-    //   { value: 400 },
-    //   { value: 600 },
-    //   { value: 400 },
-    //   { name: 'Figma', value: 450 },
-    //   { name: 'HTML', value: 400 },
-    //   { name: 'CSS', value: 400 },
-    //   { name: 'js', value: 200 }
+    {  title:400 },
+    {  title:600 },
+    {  title:400 },
+    {  title:450 },
+    {  title:400 }
+    // { value: 400 },
+    // { value: 600 },
+    // { value: 400 },
+    // { name: 'Figma', value: 450 },
+    // { name: 'HTML', value: 400 },
+    // { name: 'CSS', value: 400 },
+    // { name: 'js', value: 200 }
     ];
+
 
     // しきい値
     let threshold = 1000;
@@ -25,15 +26,16 @@
 
     variable.view_width = 0;
     variable.view_value = 0;
-    
+
   // containerに追加
     document.querySelector('#container').insertAdjacentHTML('beforeend',
         //   <div><span class="data-name"> ${variable.src}</div></span>
-        `<div class="graf">   
+        `<div class="graf">
             <div class="graf-bar-bg">
                 <div class="graf-bar" id="${variable.value}"><span></span></div>
         </div></div>`);
-    
+        let img = document.getElementById("image_place");
+        img.src = "images/mee.jpg";
 
     }
 
@@ -63,9 +65,9 @@ $(window).scroll(function (){
         // 値を再描画
         // document.querySelector(`#${variable.name} span`).innerHTML = variable.view_value;
         // グラフを再描画
-        
-         document.querySelector(`#${variable.name}`).style.width = variable.view_width + '%';
-        
+
+        document.querySelector(`#${variable.name}`).style.width = variable.view_width + '%';
+
     }
 
 
