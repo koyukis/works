@@ -14,22 +14,42 @@
 	</head>
 
 	<body>
-		<header></header>
+		<header>
+            <a href="https://koyukis.github.io/workspace/"class="btn-img">
+            <img class="logo-img" src="images/logo.png" alt="ロゴ"></a>
+        </header>
 		<main>
             <section id="top">
-                <div class=" pages-top-bottom margins">
-                    <img class="img" src="images/top-20.jpg" alt="はさみのトプ画">
-                    <p class="txt-ex top-name-center">---Programming---</p>
+                
+                <div class="top-box p-top-top"> 
+                    
+                    <p class="txt-ex top-name-center">---Python---</p>
                     <p class="txt-top top-name-center">対戦型はさみ将棋</p>
-                    <p class="txt top-name-center">◴ 2020/6/4-2020/8/27&emsp;✎ Python Illustrator</p>
+                    <p class="txt p-top-top top-name-center top-name-bottom margins">WebSocketを用いた対戦型はさみ将棋</p>
+                    <p class="p-sanserif gray top-name-center">◴ 2020/6/4-2020/8/27&emsp;✎ Python Illustrator</p>
+                </div>
+                <img class="img dish" src="images/top-big-07.png" alt="はさみのトプ画">
+                <div class=" pages-top-bottom">
+                    
+                    <div class="mini-top-k"> 
+                        <img class="img" src="images/top-07.png" alt="はさみのトプ画">
+                        <p class="txt-ex top-name-center">---Python---</p>
+                        <p class="txt-top top-name-center top-name-bottom">対戦型はさみ将棋</p>
+                        <p class="txt top-name-center top-name-bottom margins">WebSocketを用いた対戦型はさみ将棋</p>
+                        <p class="p-sanserif gray top-name-center">◴ 2020/6/4-2020/8/27<br>>✎ Python Illustrator</p>
+                    </div>
                 </div>
             </section>
 
             <section>
                 <h1 class="mixed mini-box menu topic">&nbsp;WORK</h1>
                 <div class=" pages-section-bottom margins">
-                    <p class="txt p-line">WebSocketを用いた対戦型はさみ将棋。</p>
-                    <h2 class="txt-h2">Rule</h2>
+                    <!-- <p class="txt p-line"> -->
+                    <div class="pages-center">
+                        <!-- <img class="hasami-jpg" src="images/illust-05.png" alt="将棋"> -->
+                        <h2 class="txt-h2 pages-top-bottom">---実行画面の例---</h2>
+                    </div>
+                    
                     <div class="pages-grid">
                         <img class="pages-grid-item" src="images/hasami-06.jpg" alt="1">
                         <p class="txt pages-grid-item">クライアントとサーバーを決め、2人のプレイヤーでゲームを開始する。</p>
@@ -55,11 +75,14 @@
             <section>
                 <h1 class="mixed mini-box menu topic">&nbsp;MECHANISM</h1>
                 <div class="pages-section-bottom margins">
+                    <h2 class="txt-h2 pages-center"p>---プログラムの構成---</h2>
                     <img class="img pages-grid-item" src="images/hasami-10.jpg" alt="流れ">
                     <p class="txt higashiyama-work">関数sendを使って情報msgを送信→関数recvthで解読<br/>
                     「end.」が送られると関数sendFinに進み、ボード画面はエンディングに切り替わる。
                     それと同時にプレイヤー画面にカーソルが入るとエンディングに切り替わる設定になる。</p>
+                    <h2 class="txt-h2 pages-center">---勝負の判定ルール---</h2>
                     <img class="img pages-grid-item" src="images/hasami-11.jpg" alt="終了解説">
+                    
                 </div>
             </section>
 		</main>
