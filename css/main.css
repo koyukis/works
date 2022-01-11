@@ -192,7 +192,7 @@
 	color: #333;
 }
 .ub-bar-graph dl > div{/* １この棒 */
-	margin: 0 auto 1.5em !important;
+	margin: 0 auto 1.8em !important;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
