@@ -61,6 +61,12 @@
 	margin-bottom:2%;
 }
 
+li {
+	list-style-type : square;
+	margin-left: 1.4em;
+	/* text-indent: -1.4em; */
+}
+
 .p-serif{
 	font-family: serif;
 }
