@@ -50,7 +50,7 @@
 .p-sanserif{
 	font-family: sans-serif;
 	line-height: 1.8;
-	font-size:5vw;
+	font-size:2.5vw;
 }
 .gray{
 	color:rgb(180,180,180);
@@ -582,7 +582,7 @@ li {
 .about-tag-top{/* about左のタグの上の調整 */
 	margin-top: 10%;
 }
-.about-dialy-top{/* aboutのdialyのtopにだけ使ってる */
+.about-dialy-top{/* aboutのdailyのtopにだけ使ってる　glass work 進行にも */
 	margin-top: 5%;
 }
 .section-bottom{
