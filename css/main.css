@@ -511,6 +511,9 @@ li {
 	gap:3%;
 	grid-template-columns:7fr 3fr;
 }
+.pamp-li{
+	padding-left: 2%;
+}
 .pamp-box-color{
 	width:70%;
 	padding:2%;
